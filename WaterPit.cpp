@@ -21,14 +21,26 @@ void WaterPit::Apply(Grid * pGrid, Player * pPlayer)
 
 	///TODO: Implement this function as mentioned in the guideline steps (numbered below) below
 
+// 1- Print a message, make sure to edit this message according to which player wins "You drowned in a water pit. Player (0/1) wins !  Click to continue ..." and wait mouse click
+	
+	//pGrid->GetOutput()->PrintMessage("You drowned in a water pit.Player " + to_string( );//
+	int x, y;
+	pGrid->GetInput()->GetPointClicked(x, y);
+	pGrid->GetCurrentPlayer();
 
-	// == Here are some guideline steps (numbered below) to implement this function ==
 
-	// 1- Print a message, make sure to edit this message according to which player wins "You drowned in a water pit. Player (0/1) wins !  Click to continue ..." and wait mouse click
 
-	// 2- Apply the water pit's effect by setting the player's health which drowned to zero and ending the game
-	// 3- Update the players info which is displayed (check Grid class and decide which function to use)
+	// 2- Apply the water pit's effect by setting the player's health which drowned to zero and ending the game//
+
+	pPlayer->SetHealth(0);
+	pGrid->SetEndGame(true);
+
+	// 3- Update the players info which is displayed (check Grid class and decide which function to use)//
+	string info;
+	pPlayer->AppendPlayerInfo(info);
+	pGrid->GetOutput()->PrintPlayersInfo(info);
 }
+
 
 
 void WaterPit::Save(ofstream& OutFile) {

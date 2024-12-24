@@ -1,5 +1,5 @@
 #include "RotatingGear.h"
-
+#include "player.h"
 
 
 
@@ -24,10 +24,16 @@ void RotatingGear::Apply(Grid* pGrid, Player* pPlayer)
 
 	///TODO: Implement this function as mentioned in the guideline steps (numbered below) below
 	// == Here are some guideline steps (numbered below) to implement this function ==
-
 	// 1- Print a message and change the message according to direction of rotation "You have reached a rotating gear, you will rotate (clockwise/ anti-clockwise) Click to continue ..." and wait mouse click
+	pGrid->GetOutput()->PrintMessage("You have reached a rotating gear, you will rotate");
+	int x, y;
+	pGrid->GetInput()->GetPointClicked(x, y);
 	//2- Apply the roating gear's effect by rotating the player according to the direction
+	//Direction currdirection ;
+		//pPlayer->//
+		
 }
+
 
 bool RotatingGear::GetisClockWise() const
 {
