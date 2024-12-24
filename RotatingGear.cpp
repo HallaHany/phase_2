@@ -1,5 +1,5 @@
 #include "RotatingGear.h"
-
+#include "player.h"
 
 
 
@@ -29,8 +29,11 @@ void RotatingGear::Apply(Grid* pGrid, Player* pPlayer)
 	int x, y;
 	pGrid->GetInput()->GetPointClicked(x, y);
 	//2- Apply the roating gear's effect by rotating the player according to the direction
-
+	//Direction currdirection ;
+		//pPlayer->//
+		
 }
+
 
 bool RotatingGear::GetisClockWise() const
 {
