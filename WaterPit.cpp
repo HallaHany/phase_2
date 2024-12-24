@@ -1,6 +1,6 @@
 #include "WaterPit.h"
 
-
+#include"player.h"
 
 WaterPit::WaterPit(const CellPosition & waterPitPosition):GameObject(waterPitPosition)
 {
@@ -28,8 +28,25 @@ void WaterPit::Apply(Grid * pGrid, Player * pPlayer)
 	pGrid->GetInput()->GetPointClicked(x, y);
 	pGrid->GetCurrentPlayer();
 
+<<<<<<< Updated upstream
 
 
+=======
+<<<<<<< HEAD
+	// 1- Print a message, make sure to edit this message according to which player wins "You drowned in a water pit. Player (0/1) wins !  Click to continue ..." and wait mouse click
+
+	//pGrid->GetOutput()->PrintMessage("You drowned in a water pit.Player " + to_string( );//
+	int x, y;
+	pGrid->GetInput()->GetPointClicked(x, y);
+	pGrid->GetCurrentPlayer();
+
+
+
+=======
+
+
+>>>>>>> 83930bfa231addc6790eed84f7a3c0b550aede24
+>>>>>>> Stashed changes
 	// 2- Apply the water pit's effect by setting the player's health which drowned to zero and ending the game//
 
 	pPlayer->SetHealth(0);
