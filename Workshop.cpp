@@ -15,7 +15,7 @@ void Workshop::Draw(Output * pOut) const
 	pOut->DrawWorkshop(position);
 }
 
-void Workshop::Apply(Grid * pGrid, Player * pPlayer)
+void  Workshop::Apply(Grid * pGrid, Player * pPlayer)
 {
 }
 
